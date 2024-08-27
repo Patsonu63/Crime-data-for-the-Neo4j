@@ -1,3 +1,5 @@
+#Neo4j sandbox for Cypher
+#cypher 
 # Crime-data-for-the-Neo4j
 Crime data for this demo was downloaded from public sources (http://data.gov.uk), and is freely provided for download with locations defined to the block or street level and crimes defined by month only (i.e. no day or timestamp). This public crime data does not include any sort of information about persons related to crimes, not even as anonymised tokens - it supplies only crime and location data, or in other words only the 'L' and 'E' for the POLE model. This demo uses street crime data for Greater Manchester, UK from August 2017.
 
