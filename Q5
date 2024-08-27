@@ -1,0 +1,2 @@
+MATCH (o:Officer {rank: 'Chief Inspector', surname: 'Morse'})<-[i:INVESTIGATED_BY]-(c:Crime)
+RETURN *
