@@ -1,0 +1,8 @@
+MATCH (p0:Person)-[:PARTY_TO]->(:Crime)
+WITH collect(DISTINCT id(p0)) as criminalPartyIds
+MATCH (s:Person)-[r:KNOWS]->(t:Person)
+WHERE (id(s) IN criminalPartyIds) AND (id(t) IN criminalPartyIds)
+WITH gds.alpha.graph.project('crime-associates', s, t,
+    {sourceNodeLabels:labels(s), targetNodeLabels:labels(t)},
+    {relationshipType:type(r)}, {undirectedRelationshipTypes:[type(r)]}) AS g
+RETURN g.graphName AS graph, g.nodeCount AS nodes, g.relationshipCount AS rels
