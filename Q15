@@ -1,0 +1,7 @@
+MATCH (p:Person)-[:FAMILY_REL]-(relative)-[:KNOWS]-(famFriend)-[:PARTY_TO]->(:Crime),
+(p)-[:CURRENT_ADDRESS]->(:Location)<-[:CURRENT_ADDRESS]-(relative)
+WHERE NOT (p:Person)-[:PARTY_TO]->(:Crime) AND
+ NOT (relative)-[:PARTY_TO]->(:Crime)
+RETURN p.name AS name, p.surname AS surname, p.nhs_no AS id, count(DISTINCT famFriend) AS DangerousFamilyFriends
+ORDER BY DangerousFamilyFriends DESC
+LIMIT 5
