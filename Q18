@@ -1,0 +1,6 @@
+CALL gds.triangleCount.stream('social')
+  YIELD nodeId, triangleCount as triangles
+WITH gds.util.asNode(nodeId) AS node, triangles
+RETURN node.name AS name, node.surname AS surname, node.nhs_no AS id, triangles
+ORDER BY triangles DESC
+LIMIT 10;
