@@ -1,0 +1,4 @@
+MATCH (l:Location)<-[:OCCURRED_AT]-(:Crime)
+RETURN l.address AS address, l.postcode AS postcode, count(l) AS total
+ORDER BY count(l) DESC
+LIMIT 15
