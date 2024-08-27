@@ -1,0 +1,6 @@
+CALL gds.betweenness.stream('social')
+YIELD nodeId, score AS centrality
+WITH gds.util.asNode(nodeId) AS node, centrality
+RETURN node.name AS name, node.surname AS surname, node.nhs_no AS id, toInteger(centrality) AS score
+ORDER BY centrality DESC
+LIMIT 10;
