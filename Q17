@@ -1,0 +1,3 @@
+CALL gds.graph.project('social',
+  'Person',
+  {KNOWS: {orientation:'UNDIRECTED'}})
