@@ -1,0 +1,2 @@
+MATCH path = (relative:Person)-[:CURRENT_ADDRESS]->(:Location)<-[:CURRENT_ADDRESS]-(:Person {nhs_no: '548-59-5017', surname: 'Alexander'})-[:FAMILY_REL]-(relative)-[:KNOWS]-(:Person)-[:PARTY_TO]->(:Crime)
+RETURN path
