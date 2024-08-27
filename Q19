@@ -1,0 +1,2 @@
+MATCH path = (p1:Person {nhs_no: '838-45-9343', surname: 'Ford'})-[:KNOWS]-(p2)-[:KNOWS]-(p3)-[:KNOWS]-(p1)
+RETURN path
