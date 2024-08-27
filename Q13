@@ -1,0 +1,11 @@
+MATCH (p:Person)-[:KNOWS]-(friend)-[:PARTY_TO]->(:Crime)
+WHERE NOT (p:Person)-[:PARTY_TO]->(:Crime)
+WITH p, count(distinct friend) AS dangerousFriends
+ORDER BY dangerousFriends DESC
+LIMIT 5
+WITH COLLECT (p) AS people
+UNWIND people AS p1
+UNWIND people AS p2
+WITH * WHERE id(p1) <> id (p2)
+MATCH path = shortestpath((p1)-[:KNOWS*]-(p2))
+RETURN path
