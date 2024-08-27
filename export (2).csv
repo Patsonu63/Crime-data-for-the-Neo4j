@@ -1,0 +1,11 @@
+﻿address,postcode,crime_total,crime_type,distance
+1 Coronation Street,M5 3RW,3,"[Bicycle theft, Violence and sexual offences, Public order]",0.0
+158 Gloucester Street,M5 3SG,1,[Public order],104.1354489517625
+147 West Crown Avenue,M5 3WT,3,"[Public order, Shoplifting]",162.54121621528688
+170 Chancel Avenue,M5 3SJ,1,[Violence and sexual offences],165.7102054854755
+157 Parish View,M5 3PA,1,[Burglary],175.47453728972013
+65 West Bank Street,M5 3GY,1,[Public order],237.15914155050027
+160 Carmel Close,M5 3LR,1,[Burglary],242.82251946889645
+66 Brassington Avenue,M5 3JX,1,[Violence and sexual offences],279.8874106950031
+141 Garden Wall Close,M5 3GQ,1,[Vehicle crime],289.88766629407894
+153 Robert Hall Street,M5 3PT,2,"[Public order, Criminal damage and arson]",296.7257174132251
